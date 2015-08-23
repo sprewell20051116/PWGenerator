@@ -26,3 +26,5 @@ DerivedData
 #Pods/
 
 PWGenerator/PWGenerator.xcodeproj/project.pbxproj
+
+*.pbxproj

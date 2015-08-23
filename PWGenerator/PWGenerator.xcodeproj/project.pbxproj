@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		109643691B8A1DC60056F016 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 109643681B8A1DC60056F016 /* NSString+Hash.m */; };
 		10B790491B8869D900A4C900 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B790481B8869D900A4C900 /* main.m */; };
 		10B7904C1B8869D900A4C900 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B7904B1B8869D900A4C900 /* AppDelegate.m */; };
 		10B7904F1B8869D900A4C900 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B7904E1B8869D900A4C900 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		109643671B8A1DC60056F016 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		109643681B8A1DC60056F016 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		10B790431B8869D900A4C900 /* PWGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B790471B8869D900A4C900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B790481B8869D900A4C900 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 		10B790451B8869D900A4C900 /* PWGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				109643671B8A1DC60056F016 /* NSString+Hash.h */,
+				109643681B8A1DC60056F016 /* NSString+Hash.m */,
 				10B7904A1B8869D900A4C900 /* AppDelegate.h */,
 				10B7904B1B8869D900A4C900 /* AppDelegate.m */,
 				10B7904D1B8869D900A4C900 /* ViewController.h */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B7904F1B8869D900A4C900 /* ViewController.m in Sources */,
+				109643691B8A1DC60056F016 /* NSString+Hash.m in Sources */,
 				10B7904C1B8869D900A4C900 /* AppDelegate.m in Sources */,
 				10B790491B8869D900A4C900 /* main.m in Sources */,
 			);
@@ -418,6 +424,7 @@
 				10B790681B8869D900A4C900 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10B790691B8869D900A4C900 /* Build configuration list for PBXNativeTarget "PWGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				10B7906B1B8869D900A4C900 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
