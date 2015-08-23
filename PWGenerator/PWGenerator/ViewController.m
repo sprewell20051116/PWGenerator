@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "NSString+Hash.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *TestStr = @"ThisIsTest";
+    
+    NSLog(@"Hash result = %@", [TestStr sha1]);
     // Do any additional setup after loading the view, typically from a nib.
 }
 
