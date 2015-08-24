@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *UserNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *SimplePWTextField;
+@property (strong, nonatomic) IBOutlet UILabel *PasswordLab;
 
 
 @end

@@ -15,6 +15,7 @@
 		10B790541B8869D900A4C900 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B790531B8869D900A4C900 /* Images.xcassets */; };
 		10B790571B8869D900A4C900 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B790551B8869D900A4C900 /* LaunchScreen.xib */; };
 		10B790631B8869D900A4C900 /* PWGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B790621B8869D900A4C900 /* PWGeneratorTests.m */; };
+		10F877C31B8AF40100958737 /* BackgroundImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 10F877C21B8AF40100958737 /* BackgroundImg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		10B7905C1B8869D900A4C900 /* PWGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PWGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B790611B8869D900A4C900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B790621B8869D900A4C900 /* PWGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWGeneratorTests.m; sourceTree = "<group>"; };
+		10F877C21B8AF40100958737 /* BackgroundImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				10B790501B8869D900A4C900 /* Main.storyboard */,
 				10B790531B8869D900A4C900 /* Images.xcassets */,
 				10B790551B8869D900A4C900 /* LaunchScreen.xib */,
+				10F877C21B8AF40100958737 /* BackgroundImg.png */,
 				10B790461B8869D900A4C900 /* Supporting Files */,
 			);
 			path = PWGenerator;
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B790521B8869D900A4C900 /* Main.storyboard in Resources */,
+				10F877C31B8AF40100958737 /* BackgroundImg.png in Resources */,
 				10B790571B8869D900A4C900 /* LaunchScreen.xib in Resources */,
 				10B790541B8869D900A4C900 /* Images.xcassets in Resources */,
 			);
