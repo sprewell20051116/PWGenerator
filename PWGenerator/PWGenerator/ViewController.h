@@ -11,7 +11,10 @@
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *UserNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *SimplePWTextField;
+@property (strong, nonatomic) IBOutlet UILabel *UserNameLab;
+@property (strong, nonatomic) IBOutlet UILabel *SimplePWLab;
 @property (strong, nonatomic) IBOutlet UILabel *PasswordLab;
+@property (strong, nonatomic) IBOutlet UILabel *PWLengthLab;
 
 
 @end

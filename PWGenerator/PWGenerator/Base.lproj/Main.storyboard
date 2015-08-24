@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UserName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPQ-5a-WLy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPQ-5a-WLy">
                                 <rect key="frame" x="66" y="110" width="468" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NeE-VK-cmd"/>
@@ -28,7 +28,7 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="hcO-ss-ZjS"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SimplePW" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GbF-6d-3Bz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GbF-6d-3Bz">
                                 <rect key="frame" x="66" y="162" width="468" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ds2-Ni-cbm"/>
@@ -39,13 +39,52 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="1JV-UB-Ssa"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvj-DV-Du6">
-                                <rect key="frame" x="66" y="436" width="468" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvj-DV-Du6">
+                                <rect key="frame" x="16" y="436" width="568" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="twg-4h-Udy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qt-Ob-a58">
+                                <rect key="frame" x="257" y="126" width="86" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="7eM-SM-CNP"/>
+                                    <constraint firstAttribute="width" constant="86" id="OWe-hA-T0i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWo-nC-6x6">
+                                <rect key="frame" x="243" y="176" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Rr2-ZG-qoR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-wZ-smr">
+                                <rect key="frame" x="554" y="550" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ABm-eG-4LM"/>
+                                    <constraint firstAttribute="width" constant="30" id="hCW-dh-sez"/>
+                                </constraints>
+                                <state key="normal" image="Setting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS IS PASSWORD LENGTH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipb-I1-t2z">
+                                <rect key="frame" x="66" y="210" width="250" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="uOP-iM-5Qj"/>
+                                    <constraint firstAttribute="height" constant="21" id="xc5-Cf-8Kn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -55,13 +94,22 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dPQ-5a-WLy" secondAttribute="trailing" constant="50" id="8pP-80-dnH"/>
                             <constraint firstAttribute="centerX" secondItem="dPQ-5a-WLy" secondAttribute="centerX" id="98H-RJ-pPy"/>
                             <constraint firstAttribute="centerX" secondItem="nvj-DV-Du6" secondAttribute="centerX" id="ALL-pK-Ezg"/>
+                            <constraint firstItem="GbF-6d-3Bz" firstAttribute="top" secondItem="dPQ-5a-WLy" secondAttribute="bottom" constant="12" id="AY8-BU-6aU"/>
+                            <constraint firstItem="rqQ-wZ-smr" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="F5y-o8-tiu"/>
+                            <constraint firstItem="lWo-nC-6x6" firstAttribute="top" secondItem="dPQ-5a-WLy" secondAttribute="bottom" constant="26" id="JqD-v3-g42"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="nvj-DV-Du6" secondAttribute="bottom" constant="64" id="PKz-uc-OkA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rqQ-wZ-smr" secondAttribute="bottom" constant="20" id="QFM-Fi-Ecc"/>
                             <constraint firstItem="dPQ-5a-WLy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="90" id="U0U-aw-J3Q"/>
                             <constraint firstAttribute="centerX" secondItem="GbF-6d-3Bz" secondAttribute="centerX" id="UPo-4g-IhC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nvj-DV-Du6" secondAttribute="trailing" constant="50" id="Z41-ZX-anz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nvj-DV-Du6" secondAttribute="trailing" id="Z41-ZX-anz"/>
                             <constraint firstItem="GbF-6d-3Bz" firstAttribute="top" secondItem="dPQ-5a-WLy" secondAttribute="bottom" constant="12" id="aJX-CY-eq5"/>
-                            <constraint firstItem="nvj-DV-Du6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="eQv-Xv-JUO"/>
+                            <constraint firstItem="ipb-I1-t2z" firstAttribute="top" secondItem="GbF-6d-3Bz" secondAttribute="bottom" constant="8" id="dyS-K7-WLK"/>
+                            <constraint firstItem="nvj-DV-Du6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eQv-Xv-JUO"/>
+                            <constraint firstAttribute="centerX" secondItem="lWo-nC-6x6" secondAttribute="centerX" id="fVq-EZ-pVa"/>
+                            <constraint firstAttribute="centerX" secondItem="4qt-Ob-a58" secondAttribute="centerX" id="lLA-w6-Wns"/>
+                            <constraint firstItem="4qt-Ob-a58" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="106" id="pzh-dk-cU6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GbF-6d-3Bz" secondAttribute="trailing" constant="50" id="wH5-IV-5sO"/>
+                            <constraint firstItem="ipb-I1-t2z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="yaW-Rv-TAk"/>
                             <constraint firstItem="dPQ-5a-WLy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="z1V-CC-sbs"/>
                         </constraints>
                         <connections>
@@ -69,8 +117,11 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="PWLengthLab" destination="ipb-I1-t2z" id="H7w-Jd-rW3"/>
                         <outlet property="PasswordLab" destination="nvj-DV-Du6" id="BME-as-a20"/>
+                        <outlet property="SimplePWLab" destination="lWo-nC-6x6" id="TAL-mY-a1T"/>
                         <outlet property="SimplePWTextField" destination="GbF-6d-3Bz" id="XUy-C3-QlC"/>
+                        <outlet property="UserNameLab" destination="4qt-Ob-a58" id="Dgm-pD-6n8"/>
                         <outlet property="UserNameTextField" destination="dPQ-5a-WLy" id="zA7-z1-yRB"/>
                     </connections>
                 </viewController>
@@ -84,4 +135,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Setting" width="60" height="60"/>
+    </resources>
 </document>

@@ -14,14 +14,20 @@
 
 @end
 
+#define USER_NAME_TEXTFIELD_TAG 0
+#define SIMPLE_PW_TEXTFIELD_TAG 1
+#define PASSWORD_LENGTH_PREFIX_STRING @"Length of password is "
+#define PASSWORD_DEFAULT_LENGTH 10
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BackgroundImg.png"]]];
-    [self SetLayer_UserNameTextField];
-    [self SetLayer_SimplePWTextField];
-    [self SetLayer_PasswordLab];
+    [self init_UserNameTextField];
+    [self init_SimplePWTextField];
+    [self init_PasswordLab];
+    [self init_PWLengthLab];
     
     NSString *TestStr = @"ThisIsTest";
     
@@ -34,6 +40,37 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void) init_UserNameTextField
+{
+    [[UITextField appearance] setTintColor:[UIColor whiteColor]];
+    _UserNameTextField.tag = USER_NAME_TEXTFIELD_TAG;
+    _UserNameTextField.textColor = [UIColor whiteColor];
+    _UserNameTextField.returnKeyType = UIReturnKeyDone;
+    [self SetLayer_UserNameTextField];
+}
+
+-(void) init_SimplePWTextField
+{
+    [[UITextField appearance] setTintColor:[UIColor whiteColor]];
+    _SimplePWTextField.tag = SIMPLE_PW_TEXTFIELD_TAG;
+    _SimplePWTextField.textColor = [UIColor whiteColor];
+    _SimplePWTextField.returnKeyType = UIReturnKeyDone;
+    [self SetLayer_SimplePWTextField];
+}
+
+
+-(void) init_PasswordLab
+{
+    _PasswordLab.textAlignment = NSTextAlignmentCenter;
+    _PasswordLab.textColor = [UIColor whiteColor];
+    [self SetLayer_PasswordLab];
+}
+
+-(void) init_PWLengthLab
+{
+    _PWLengthLab.text = [NSString stringWithFormat:@"%@%d", PASSWORD_LENGTH_PREFIX_STRING, PASSWORD_DEFAULT_LENGTH];
+}
 
 -(void) SetLayer_UserNameTextField
 {
@@ -51,6 +88,7 @@
     bottomBorder.frame = CGRectMake(0.0f, _SimplePWTextField.frame.size.height - 1, _SimplePWTextField.frame.size.width, 1.0f);
     bottomBorder.backgroundColor = [UIColor whiteColor].CGColor;
     [_SimplePWTextField.layer addSublayer:bottomBorder];
+    
 }
 
 -(void) SetLayer_PasswordLab
@@ -62,19 +100,69 @@
 
 #pragma mark -
 #pragma mark UITextField Delegate
-
 - (void) textFieldDidBeginEditing:(UITextField *)textField
 {
     activeTextField = textField;
     NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    if (textField.tag == USER_NAME_TEXTFIELD_TAG) {
+        [_UserNameLab setHidden:YES];
+    } else {
+        [_SimplePWLab setHidden:YES];
+    }
+    
+    
+    if ((_UserNameLab.text.length == 0) || (_SimplePWLab.text.length == 0)) {
+        
+        NSLog(@"Not to generate hash");
+        
+    } else {
+        
+        NSString *HashStr = [NSString stringWithFormat:@"%@%@", _UserNameTextField.text, _SimplePWTextField.text];
+        
+        if ([HashStr length] > 0) {
+            _PasswordLab.text = [[HashStr sha1] substringWithRange:NSMakeRange(0, PASSWORD_DEFAULT_LENGTH)];
+        }
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if ([textField.text length] == 0) {
+        if (textField.tag == USER_NAME_TEXTFIELD_TAG) {
+            [_UserNameLab setHidden:NO];
+        } else {
+            [_SimplePWLab setHidden:NO];
+        }
+    }
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if ([textField.text length] == 0) {
+        if (textField.tag == USER_NAME_TEXTFIELD_TAG) {
+            [_UserNameLab setHidden:NO];
+        } else {
+            [_SimplePWLab setHidden:NO];
+        }
+    }
+    [textField resignFirstResponder];    
+    return YES;
 }
 
 
 - (void) closeKeyboard
 {
     [activeTextField resignFirstResponder];
-    NSLog(@"%s !! %@", __PRETTY_FUNCTION__, activeTextField);
-
+    
+    if ([activeTextField.text length] == 0) {
+        if (activeTextField.tag == USER_NAME_TEXTFIELD_TAG) {
+            [_UserNameLab setHidden:NO];
+        } else {
+            [_SimplePWLab setHidden:NO];
+        }
+    }
 }
 
 
