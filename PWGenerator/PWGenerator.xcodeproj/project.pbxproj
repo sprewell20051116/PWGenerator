@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101FB0E51B8C0A80005AEF9C /* PWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FB0E41B8C0A80005AEF9C /* PWSettingViewController.m */; };
 		109643691B8A1DC60056F016 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 109643681B8A1DC60056F016 /* NSString+Hash.m */; };
 		10B790491B8869D900A4C900 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B790481B8869D900A4C900 /* main.m */; };
 		10B7904C1B8869D900A4C900 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B7904B1B8869D900A4C900 /* AppDelegate.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		101FB0E31B8C0A80005AEF9C /* PWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWSettingViewController.h; sourceTree = "<group>"; };
+		101FB0E41B8C0A80005AEF9C /* PWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWSettingViewController.m; sourceTree = "<group>"; };
 		109643671B8A1DC60056F016 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		109643681B8A1DC60056F016 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		10B790431B8869D900A4C900 /* PWGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +100,8 @@
 				10B790551B8869D900A4C900 /* LaunchScreen.xib */,
 				10F877C21B8AF40100958737 /* BackgroundImg.png */,
 				10B790461B8869D900A4C900 /* Supporting Files */,
+				101FB0E31B8C0A80005AEF9C /* PWSettingViewController.h */,
+				101FB0E41B8C0A80005AEF9C /* PWSettingViewController.m */,
 			);
 			path = PWGenerator;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				109643691B8A1DC60056F016 /* NSString+Hash.m in Sources */,
 				10B7904C1B8869D900A4C900 /* AppDelegate.m in Sources */,
 				10B790491B8869D900A4C900 /* main.m in Sources */,
+				101FB0E51B8C0A80005AEF9C /* PWSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

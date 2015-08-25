@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *SimplePWLab;
 @property (strong, nonatomic) IBOutlet UILabel *PasswordLab;
 @property (strong, nonatomic) IBOutlet UILabel *PWLengthLab;
+@property (strong, nonatomic) IBOutlet UIButton *SettingBtn;
+@property (strong, nonatomic) IBOutlet UITextView *PasswordTextView;
 
 
 @end

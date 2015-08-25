@@ -16,7 +16,7 @@
 
 #define USER_NAME_TEXTFIELD_TAG 0
 #define SIMPLE_PW_TEXTFIELD_TAG 1
-#define PASSWORD_LENGTH_PREFIX_STRING @"Length of password is "
+#define PASSWORD_LENGTH_PREFIX_STRING @"Password Length "
 #define PASSWORD_DEFAULT_LENGTH 10
 
 @implementation ViewController
@@ -28,6 +28,7 @@
     [self init_SimplePWTextField];
     [self init_PasswordLab];
     [self init_PWLengthLab];
+    [self init_SettingBtn];
     
     NSString *TestStr = @"ThisIsTest";
     
@@ -70,6 +71,16 @@
 -(void) init_PWLengthLab
 {
     _PWLengthLab.text = [NSString stringWithFormat:@"%@%d", PASSWORD_LENGTH_PREFIX_STRING, PASSWORD_DEFAULT_LENGTH];
+}
+
+-(void) init_SettingBtn
+{
+    [_SettingBtn addTarget:self action:@selector(SettingBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void) init_PasswordTextView
+{
+    
 }
 
 -(void) SetLayer_UserNameTextField
@@ -121,7 +132,7 @@
         NSString *HashStr = [NSString stringWithFormat:@"%@%@", _UserNameTextField.text, _SimplePWTextField.text];
         
         if ([HashStr length] > 0) {
-            _PasswordLab.text = [[HashStr sha1] substringWithRange:NSMakeRange(0, PASSWORD_DEFAULT_LENGTH)];
+            _PasswordTextView.text = [[HashStr sha1] substringWithRange:NSMakeRange(0, PASSWORD_DEFAULT_LENGTH)];
         }
     }
 }
@@ -170,6 +181,10 @@
     [self closeKeyboard];
 }
 
+
+-(IBAction)SettingBtnClicked:(id)sender
+{
+}
 
 
 @end
