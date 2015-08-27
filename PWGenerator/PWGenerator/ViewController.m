@@ -30,9 +30,6 @@
     [self init_PWLengthLab];
     [self init_SettingBtn];
     
-    NSString *TestStr = @"ThisIsTest";
-    
-    NSLog(@"Hash result = %@", [TestStr sha1]);
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -123,6 +120,18 @@
     }
     
     
+   }
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if ([textField.text length] == 0) {
+        if (textField.tag == USER_NAME_TEXTFIELD_TAG) {
+            [_UserNameLab setHidden:NO];
+        } else {
+            [_SimplePWLab setHidden:NO];
+        }
+    }
+    
     if ((_UserNameLab.text.length == 0) || (_SimplePWLab.text.length == 0)) {
         
         NSLog(@"Not to generate hash");
@@ -135,17 +144,7 @@
             _PasswordTextView.text = [[HashStr sha1] substringWithRange:NSMakeRange(0, PASSWORD_DEFAULT_LENGTH)];
         }
     }
-}
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    if ([textField.text length] == 0) {
-        if (textField.tag == USER_NAME_TEXTFIELD_TAG) {
-            [_UserNameLab setHidden:NO];
-        } else {
-            [_SimplePWLab setHidden:NO];
-        }
-    }
 }
 
 
@@ -166,15 +165,7 @@
 - (void) closeKeyboard
 {
     [activeTextField resignFirstResponder];
-    
-    if ([activeTextField.text length] == 0) {
-        if (activeTextField.tag == USER_NAME_TEXTFIELD_TAG) {
-            [_UserNameLab setHidden:NO];
-        } else {
-            [_SimplePWLab setHidden:NO];
-        }
     }
-}
 
 
 - (IBAction) closeKeyboard:(UIGestureRecognizer *)sender {

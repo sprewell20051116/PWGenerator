@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+    [self init_pList];
     return YES;
 }
 
@@ -44,5 +44,72 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+#pragma mark -
+#pragma mark Private Methods
+
+-(void) init_pList
+{
+    NSString *destPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    destPath = [destPath stringByAppendingPathComponent:@"PWSetting.plist"]; // If the file doesn't exist in the Documents Folder, copy it.
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if (![fileManager fileExistsAtPath:destPath]) {
+        NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"PWSetting" ofType:@"plist"];
+        [fileManager copyItemAtPath:sourcePath toPath:destPath error:nil];
+    }
+    
+    NSMutableDictionary *plistDict;
+    if ([fileManager fileExistsAtPath:destPath]) //檢查檔案是否存在
+    {
+        plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:destPath];
+    }else{
+        plistDict = [[NSMutableDictionary alloc] init];
+    }
+    
+    //NSLog(@"[cc] test %@", plistDict);
+}
+
+-(NSMutableDictionary*) Read_SettingList
+{
+    NSString *destPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    destPath = [destPath stringByAppendingPathComponent:@"PWSetting.plist"]; // If the file doesn't exist in the Documents Folder, copy it.
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSMutableDictionary *plistDict;
+    
+    if ([fileManager fileExistsAtPath:destPath]) //檢查檔案是否存在
+    {
+        plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:destPath];
+    }
+    
+    return plistDict;
+}
+
+-(BOOL) Write_SettingListWithDictionary : (NSDictionary*) plistDic
+{
+    
+    NSString *destPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    destPath = [destPath stringByAppendingPathComponent:@"PWSetting.plist"]; // If the file doesn't exist in the Documents Folder, copy it.
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    if ([fileManager fileExistsAtPath:destPath]) {
+        
+        if ([plistDic writeToFile:destPath atomically: YES]) {
+            
+            return YES;
+            
+        } else {
+            
+            return NO;
+        }
+
+    } else {
+        NSLog(@"File not exist");
+        return NO;
+    }
+    
+}
+
 
 @end

@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#define PLIST_SETTING_VERSION_KEY   @"Version"
+#define PLIST_SETTING_USER_NAME_KEY @"UserName"
 
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
 
+-(NSMutableDictionary*) Read_SettingList;
+-(BOOL) Write_SettingListWithDictionary : (NSDictionary*) plistDic;
 
 @end
+
+
 
