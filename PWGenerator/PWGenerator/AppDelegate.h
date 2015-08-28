@@ -10,6 +10,7 @@
 
 #define PLIST_SETTING_VERSION_KEY   @"Version"
 #define PLIST_SETTING_USER_NAME_KEY @"UserName"
+#define PLIST_SETTING_TUTORIAL_KEY  @"SawTutor"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;

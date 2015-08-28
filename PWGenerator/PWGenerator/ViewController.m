@@ -135,6 +135,7 @@
     if ((_UserNameLab.text.length == 0) || (_SimplePWLab.text.length == 0)) {
         
         NSLog(@"Not to generate hash");
+        _PasswordTextView.text = @"Password";
         
     } else {
         
@@ -165,7 +166,7 @@
 - (void) closeKeyboard
 {
     [activeTextField resignFirstResponder];
-    }
+}
 
 
 - (IBAction) closeKeyboard:(UIGestureRecognizer *)sender {
@@ -175,6 +176,7 @@
 
 -(IBAction)SettingBtnClicked:(id)sender
 {
+    
 }
 
 
