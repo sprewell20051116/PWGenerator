@@ -137,19 +137,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-        </scene>
-        <!--Tutorial Page View Controller-->
-        <scene sceneID="TyY-qs-K6N">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="693-xg-Qot" customClass="PWTutorialPageViewController" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vd4-O3-SEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="364" y="1074"/>
+            <point key="canvasLocation" x="626" y="185"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="wR8-ni-Ild">
             <objects>
-                <viewController id="ufa-7W-wfa" customClass="PWSettingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PWSettingViewController" id="ufa-7W-wfa" customClass="PWSettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ra-1s-Hdn"/>
                         <viewControllerLayoutGuide type="bottom" id="OeZ-xI-k3Q"/>
@@ -194,76 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc4-Pi-Zh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032" y="392"/>
-        </scene>
-        <!--Page1 View Controller-->
-        <scene sceneID="z26-w9-nou">
-            <objects>
-                <viewController storyboardIdentifier="PWPage1ViewController" id="6kQ-Az-1dK" customClass="PWPage1ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iat-nF-wlR"/>
-                        <viewControllerLayoutGuide type="bottom" id="HuP-ak-YoI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Meh-kC-kDF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-hj-t8d">
-                                <rect key="frame" x="280" y="290" width="40" height="20"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBh-4C-cka">
-                                <rect key="frame" x="277" y="418" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" modalPresentationStyle="overFullScreen" id="63B-GL-Fp3"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="e4b-hj-t8d" secondAttribute="centerX" id="Xh1-si-JGv"/>
-                            <constraint firstAttribute="centerY" secondItem="e4b-hj-t8d" secondAttribute="centerY" id="s6u-15-JQd"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0lL-HZ-UVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1032" y="1074"/>
-        </scene>
-        <!--Page2 View Controller-->
-        <scene sceneID="HY5-RP-KTy">
-            <objects>
-                <viewController storyboardIdentifier="PWPage2ViewController" id="IAI-0L-866" customClass="PWPage2ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="v8r-rR-tkv"/>
-                        <viewControllerLayoutGuide type="bottom" id="LLa-Lk-8pl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zON-50-dhy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJb-Gu-HoS">
-                                <rect key="frame" x="280" y="290" width="40" height="20"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="gJb-Gu-HoS" secondAttribute="centerY" id="CYV-JQ-gDL"/>
-                            <constraint firstAttribute="centerX" secondItem="gJb-Gu-HoS" secondAttribute="centerX" id="eZR-Je-qc3"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="seF-iR-vnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1679" y="1074"/>
+            <point key="canvasLocation" x="1298" y="185"/>
         </scene>
     </scenes>
     <resources>

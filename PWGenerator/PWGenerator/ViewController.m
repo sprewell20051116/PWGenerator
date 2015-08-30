@@ -132,13 +132,13 @@
         }
     }
     
-    if ((_UserNameLab.text.length == 0) || (_SimplePWLab.text.length == 0)) {
+    if ((_UserNameTextField.text.length == 0) || (_SimplePWTextField.text.length == 0)) {
         
         NSLog(@"Not to generate hash");
         _PasswordTextView.text = @"Password";
         
     } else {
-        
+
         NSString *HashStr = [NSString stringWithFormat:@"%@%@", _UserNameTextField.text, _SimplePWTextField.text];
         
         if ([HashStr length] > 0) {

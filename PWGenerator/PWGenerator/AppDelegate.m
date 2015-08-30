@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "PWTutorialPageViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,10 +19,9 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self init_pList];
-//    
+    
 //    if (nil == [[self Read_SettingList] objectForKey:PLIST_SETTING_TUTORIAL_KEY]) {
 //        // TODO: set init page to Tutorial page
-//        
 //        PWTutorialPageViewController *TutorPageVC = [[PWTutorialPageViewController alloc] init];
 //        self.window.rootViewController = TutorPageVC;
 //
