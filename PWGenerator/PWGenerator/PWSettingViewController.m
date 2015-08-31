@@ -6,10 +6,12 @@
 //  Copyright (c) 2015年 GIGIGUN. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "PWSettingViewController.h"
+#import "TutorPageViewController.h"
 
 @interface PWSettingViewController ()
-
+@property (strong, nonatomic) TutorPageViewController *TutorPageVC;
 @end
 
 @implementation PWSettingViewController
@@ -28,6 +30,25 @@
 -(IBAction)DoneBtnClicked:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)OpenTutorialClicked:(id)sender {
+    _TutorPageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorPageViewController"];
+    [self RegisterNotification_TutorialDone];
+    [self presentViewController:_TutorPageVC animated:YES completion:nil];
+    
+}
+
+- (void) RegisterNotification_TutorialDone
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification1) name:TUTORIAL_NOTIFICATION_KEY object:nil];
+}
+
+-(void) receiveNotification1
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [_TutorPageVC Dissmiss:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:TUTORIAL_NOTIFICATION_KEY object:nil];
 }
 
 

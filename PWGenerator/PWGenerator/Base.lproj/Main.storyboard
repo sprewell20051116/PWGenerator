@@ -142,13 +142,7 @@
         <!--Tutor Page View Controller-->
         <scene sceneID="UF9-5y-Nwg">
             <objects>
-                <pageViewController storyboardIdentifier="TutorPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="fKB-aU-ojb" customClass="TutorPageViewController" sceneMemberID="viewController">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="view.setBackgroundColor">
-                            <color key="value" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </pageViewController>
+                <pageViewController storyboardIdentifier="TutorPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="fKB-aU-ojb" customClass="TutorPageViewController" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkR-bc-by3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="626" y="871"/>
@@ -171,14 +165,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案 圖或是文案" translatesAutoresizingMaskIntoConstraints="NO" id="XAN-U7-EJc">
+                                <rect key="frame" x="16" y="200" width="568" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="dcx-Tg-TBI"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="XAN-U7-EJc" firstAttribute="trailing" secondItem="Z0M-Zo-Rm5" secondAttribute="trailingMargin" id="EyE-lA-FfK"/>
                             <constraint firstItem="n8T-xh-BiN" firstAttribute="top" secondItem="Z0M-Zo-Rm5" secondAttribute="top" constant="95" id="VI5-fq-Ohy"/>
+                            <constraint firstItem="XAN-U7-EJc" firstAttribute="leading" secondItem="Z0M-Zo-Rm5" secondAttribute="leadingMargin" id="VbV-Qv-PzU"/>
+                            <constraint firstItem="XAN-U7-EJc" firstAttribute="top" secondItem="Z0M-Zo-Rm5" secondAttribute="topMargin" constant="200" id="WSS-V9-bnN"/>
                             <constraint firstAttribute="trailing" secondItem="n8T-xh-BiN" secondAttribute="trailing" constant="16" id="fXf-aN-UP2"/>
                             <constraint firstItem="n8T-xh-BiN" firstAttribute="leading" secondItem="Z0M-Zo-Rm5" secondAttribute="leading" constant="16" id="ygD-7r-VK4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TitleLab" destination="n8T-xh-BiN" id="5NI-Eu-mh9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tq4-El-iWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,13 +211,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-eI-xDW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-eI-xDW">
                                 <rect key="frame" x="175" y="194" width="250" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FYb-hW-2wV"/>
                                     <constraint firstAttribute="width" constant="250" id="JV8-Ce-BcN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yYK-Wu-oLU" id="pz5-mH-TGz"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,9 +233,22 @@
                             <constraint firstAttribute="trailing" secondItem="qs9-ka-jmr" secondAttribute="trailing" constant="16" id="vya-Tb-qtq"/>
                             <constraint firstItem="Mqq-eI-xDW" firstAttribute="top" secondItem="qs9-ka-jmr" secondAttribute="bottom" constant="70" id="znZ-OE-vDq"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="I5E-YM-ena" appends="YES" id="Y7x-EA-Gfn"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="NickNameTextField" destination="Mqq-eI-xDW" id="jLQ-vx-FQF"/>
+                        <outlet property="TitleLab" destination="qs9-ka-jmr" id="gGK-gn-UvU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujw-av-w9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="I5E-YM-ena">
+                    <connections>
+                        <action selector="closeKeyboard:" destination="yYK-Wu-oLU" id="t8z-JQ-tTj"/>
+                        <outlet property="delegate" destination="v7B-GA-LUq" id="Ejt-Qi-7Ct"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1944" y="871"/>
         </scene>
@@ -257,13 +284,18 @@
                                     <action selector="TutorBtnClicked:" destination="ZuC-Kt-LY0" eventType="touchUpInside" id="uz3-fV-GJA"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bro-8r-xtr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bro-8r-xtr">
                                 <rect key="frame" x="175" y="194" width="250" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zzn-kh-e97"/>
                                     <constraint firstAttribute="width" constant="250" id="g9l-SC-pJX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZuC-Kt-LY0" id="0kA-rg-Pxz"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -276,12 +308,23 @@
                             <constraint firstItem="bro-8r-xtr" firstAttribute="top" secondItem="Fj7-pf-s1f" secondAttribute="bottom" constant="70" id="ykq-hi-RhH"/>
                             <constraint firstAttribute="trailing" secondItem="Fj7-pf-s1f" secondAttribute="trailing" constant="16" id="ysE-bT-ItB"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UKX-TL-pIJ" appends="YES" id="M6V-ZD-ew7"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="PWlengthTextField" destination="bro-8r-xtr" id="qdg-zM-g9l"/>
+                        <outlet property="TitleLab" destination="Fj7-pf-s1f" id="jUB-7X-UaR"/>
                         <outlet property="TutorSeenBtn" destination="AhZ-cv-bPW" id="7EI-2i-fey"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viZ-0n-phr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UKX-TL-pIJ">
+                    <connections>
+                        <action selector="closeKeyboard:" destination="ZuC-Kt-LY0" id="3d0-y1-vra"/>
+                        <outlet property="delegate" destination="UlN-a1-kdP" id="GNy-h5-1UQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2603" y="871"/>
         </scene>
@@ -318,12 +361,33 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWq-nW-ADa">
+                                <rect key="frame" x="239" y="343" width="123" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H81-qn-mOy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <state key="normal" title="Open Tutorial">
+                                    <color key="titleColor" red="0.38431372549999998" green="0.69019607839999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="H81-qn-mOy"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="OpenTutorialClicked:" destination="ufa-7W-wfa" eventType="touchUpInside" id="Jto-LB-qPH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="zWq-nW-ADa" secondAttribute="centerX" id="EEJ-7d-50p"/>
                             <constraint firstItem="o3F-Kq-pdl" firstAttribute="top" secondItem="0ra-1s-Hdn" secondAttribute="bottom" constant="5" id="NCv-X0-hho"/>
                             <constraint firstAttribute="centerX" secondItem="6m1-qC-mqj" secondAttribute="centerX" id="OYN-zP-4BN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o3F-Kq-pdl" secondAttribute="trailing" constant="3" id="VR6-0I-qwP"/>
+                            <constraint firstItem="zWq-nW-ADa" firstAttribute="top" secondItem="6m1-qC-mqj" secondAttribute="bottom" constant="33" id="bFU-Ls-9Ia"/>
                             <constraint firstAttribute="centerY" secondItem="6m1-qC-mqj" secondAttribute="centerY" id="ldf-hP-oca"/>
                         </constraints>
                     </view>

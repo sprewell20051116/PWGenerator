@@ -69,6 +69,8 @@
     NSLog(@"%s", __PRETTY_FUNCTION__);
     [_TutorPage Dissmiss:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:TUTORIAL_NOTIFICATION_KEY object:nil];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate Plist_SettingTutorialSeen];
 }
 
 

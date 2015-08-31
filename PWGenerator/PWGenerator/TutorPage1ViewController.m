@@ -9,6 +9,7 @@
 #import "TutorPage1ViewController.h"
 
 @interface TutorPage1ViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *TitleLab;
 
 @end
 
