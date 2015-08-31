@@ -32,19 +32,43 @@
     [self init_PWLengthLab];
     [self init_SettingBtn];
     
+    
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     if(![appDelegate Plist_GetTutorialSeen])
     {
-        //TODO: init page view controller
         _TutorPage = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorPageViewController"];
-        [self.view addSubview:_TutorPage.view];
+        [self RegisterNotification_TutorialDone];
+        
+        dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async( dispatch_get_main_queue(), ^{
+                [self presentViewController:_TutorPage animated:NO completion:nil];
+            });
+        });
     }
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
+- (void) RegisterNotification_TutorialDone
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification) name:TUTORIAL_NOTIFICATION_KEY object:nil];
+}
+
+-(void) receiveNotification
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [_TutorPage Dissmiss:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:TUTORIAL_NOTIFICATION_KEY object:nil];
 }
 
 

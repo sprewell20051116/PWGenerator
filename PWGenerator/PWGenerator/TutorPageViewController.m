@@ -79,6 +79,11 @@
     return 0;
 }
 
+-(IBAction)Dissmiss:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 

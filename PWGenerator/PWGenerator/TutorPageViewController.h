@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface TutorPageViewController : UIPageViewController
+
+-(IBAction)Dissmiss:(id)sender;
 
 @end

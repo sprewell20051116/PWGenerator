@@ -12,6 +12,9 @@
 #define PLIST_SETTING_USER_NAME_KEY @"UserName"
 #define PLIST_SETTING_TUTORIAL_KEY  @"SeenTutor"
 
+#define TUTORIAL_NOTIFICATION_KEY @"TUTORIAL_NOTIFICATION_KEY"
+
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
 

@@ -7,7 +7,7 @@
 //
 
 #import "TutorPage3ViewController.h"
-
+#import "AppDelegate.h"
 @interface TutorPage3ViewController ()
 
 @end
@@ -37,6 +37,7 @@
 - (IBAction)TutorBtnClicked:(UIButton *)sender {
     // TODO: dismiss page view Controller
     NSLog(@"%s", __PRETTY_FUNCTION__);
+    [[NSNotificationCenter defaultCenter] postNotificationName:TUTORIAL_NOTIFICATION_KEY object:self userInfo:nil];
     
 }
 @end
