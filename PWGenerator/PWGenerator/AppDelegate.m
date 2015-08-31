@@ -119,4 +119,21 @@
 }
 
 
+-(void) Plist_SettingTutorialSeen
+{
+    NSMutableDictionary *Dic = [self Read_SettingList];
+    [Dic setObject:[NSNumber numberWithBool:YES] forKey:PLIST_SETTING_TUTORIAL_KEY];
+    [self Write_SettingListWithDictionary:Dic];
+}
+
+-(BOOL) Plist_GetTutorialSeen
+{
+    if (nil == [[self Read_SettingList] objectForKey:PLIST_SETTING_TUTORIAL_KEY]) {
+        return NO;
+    } else {
+        return [[[self Read_SettingList] objectForKey:PLIST_SETTING_TUTORIAL_KEY] boolValue];
+    }
+}
+
+
 @end

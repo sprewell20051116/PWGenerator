@@ -139,6 +139,123 @@
             </objects>
             <point key="canvasLocation" x="626" y="185"/>
         </scene>
+        <!--Tutor Page View Controller-->
+        <scene sceneID="UF9-5y-Nwg">
+            <objects>
+                <pageViewController storyboardIdentifier="TutorPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="fKB-aU-ojb" customClass="TutorPageViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AkR-bc-by3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="871"/>
+        </scene>
+        <!--Tutor Page1 View Controller-->
+        <scene sceneID="m0E-fA-NDB">
+            <objects>
+                <viewController storyboardIdentifier="TutorPage1ViewController" id="wIC-s8-e1R" customClass="TutorPage1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wHY-7Q-vTY"/>
+                        <viewControllerLayoutGuide type="bottom" id="lB5-Rt-fyy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z0M-Zo-Rm5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYc-Ie-FxD">
+                                <rect key="frame" x="276" y="289" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="WYc-Ie-FxD" secondAttribute="centerY" id="CUo-EM-wrh"/>
+                            <constraint firstAttribute="centerX" secondItem="WYc-Ie-FxD" secondAttribute="centerX" id="lVu-52-yF6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tq4-El-iWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="871"/>
+        </scene>
+        <!--Tutor Page2 View Controller-->
+        <scene sceneID="mX4-Lz-Jt6">
+            <objects>
+                <viewController storyboardIdentifier="TutorPage2ViewController" id="yYK-Wu-oLU" customClass="TutorPage2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WNx-GT-XBh"/>
+                        <viewControllerLayoutGuide type="bottom" id="8hl-JV-Puz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v7B-GA-LUq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wi-h0-bJI">
+                                <rect key="frame" x="276" y="289" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3Wi-h0-bJI" secondAttribute="centerX" id="NFZ-LL-qog"/>
+                            <constraint firstAttribute="centerY" secondItem="3Wi-h0-bJI" secondAttribute="centerY" id="NJT-ms-zh7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujw-av-w9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944" y="871"/>
+        </scene>
+        <!--Tutor Page3 View Controller-->
+        <scene sceneID="3Wg-3o-ZBl">
+            <objects>
+                <viewController storyboardIdentifier="TutorPage3ViewController" id="ZuC-Kt-LY0" customClass="TutorPage3ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TEj-Hd-Kxr"/>
+                        <viewControllerLayoutGuide type="bottom" id="NaU-bH-x3c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UlN-a1-kdP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RB-jF-Zdw">
+                                <rect key="frame" x="276" y="289" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhZ-cv-bPW">
+                                <rect key="frame" x="217" y="318" width="167" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TnL-NS-W9v"/>
+                                    <constraint firstAttribute="width" constant="167" id="kJ5-xD-NP0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                                <state key="normal" title="Tutorial Has Been Checked">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="TutorBtnClicked:" destination="ZuC-Kt-LY0" eventType="touchUpInside" id="uz3-fV-GJA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3RB-jF-Zdw" secondAttribute="centerX" id="2ei-5k-1EP"/>
+                            <constraint firstItem="AhZ-cv-bPW" firstAttribute="top" secondItem="3RB-jF-Zdw" secondAttribute="bottom" constant="8" id="Dfm-Jn-tv4"/>
+                            <constraint firstAttribute="centerX" secondItem="AhZ-cv-bPW" secondAttribute="centerX" id="hd7-ij-Xzn"/>
+                            <constraint firstAttribute="centerY" secondItem="3RB-jF-Zdw" secondAttribute="centerY" id="jDi-hx-H1q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TutorSeenBtn" destination="AhZ-cv-bPW" id="7EI-2i-fey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="viZ-0n-phr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2603" y="871"/>
+        </scene>
         <!--Setting View Controller-->
         <scene sceneID="wR8-ni-Ild">
             <objects>

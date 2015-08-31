@@ -6,12 +6,14 @@
 //  Copyright (c) 2015年 GIGIGUN. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "ViewController.h"
 #import "NSString+Hash.h"
+#import "TutorPageViewController.h"
 @interface ViewController () {
     UITextField *activeTextField;
 }
-
+@property (strong, nonatomic) TutorPageViewController *TutorPage;
 @end
 
 #define USER_NAME_TEXTFIELD_TAG 0
@@ -30,6 +32,13 @@
     [self init_PWLengthLab];
     [self init_SettingBtn];
     
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    if(![appDelegate Plist_GetTutorialSeen])
+    {
+        //TODO: init page view controller
+        _TutorPage = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorPageViewController"];
+        [self.view addSubview:_TutorPage.view];
+    }
     // Do any additional setup after loading the view, typically from a nib.
 }
 
