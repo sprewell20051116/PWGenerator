@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[UIColor clearColor]];
     self.dataSource = self;
     self.delegate = self;
     CurrentIndex = 0;

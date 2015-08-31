@@ -159,17 +159,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYc-Ie-FxD">
-                                <rect key="frame" x="276" y="289" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generate Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8T-xh-BiN">
+                                <rect key="frame" x="16" y="97" width="568" height="29"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="WYc-Ie-FxD" secondAttribute="centerY" id="CUo-EM-wrh"/>
-                            <constraint firstAttribute="centerX" secondItem="WYc-Ie-FxD" secondAttribute="centerX" id="lVu-52-yF6"/>
+                            <constraint firstItem="n8T-xh-BiN" firstAttribute="top" secondItem="wHY-7Q-vTY" secondAttribute="bottom" constant="77" id="FvM-GD-Row"/>
+                            <constraint firstItem="n8T-xh-BiN" firstAttribute="leading" secondItem="Z0M-Zo-Rm5" secondAttribute="leadingMargin" id="WhB-An-NvK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n8T-xh-BiN" secondAttribute="trailing" id="X08-av-pWF"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -189,17 +190,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wi-h0-bJI">
-                                <rect key="frame" x="276" y="289" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Nick Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qs9-ka-jmr">
+                                <rect key="frame" x="16" y="95" width="568" height="29"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-eI-xDW">
+                                <rect key="frame" x="175" y="194" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="xww-Aw-NWl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="3Wi-h0-bJI" secondAttribute="centerX" id="NFZ-LL-qog"/>
-                            <constraint firstAttribute="centerY" secondItem="3Wi-h0-bJI" secondAttribute="centerY" id="NJT-ms-zh7"/>
+                            <constraint firstItem="Mqq-eI-xDW" firstAttribute="top" secondItem="qs9-ka-jmr" secondAttribute="bottom" constant="70" id="5Mm-nK-s9q"/>
+                            <constraint firstItem="qs9-ka-jmr" firstAttribute="trailing" secondItem="v7B-GA-LUq" secondAttribute="trailingMargin" id="DH1-Qx-QgZ"/>
+                            <constraint firstAttribute="centerX" secondItem="Mqq-eI-xDW" secondAttribute="centerX" id="ay3-gl-xYH"/>
+                            <constraint firstItem="qs9-ka-jmr" firstAttribute="top" secondItem="WNx-GT-XBh" secondAttribute="bottom" constant="75" id="fu8-HW-MdI"/>
+                            <constraint firstItem="qs9-ka-jmr" firstAttribute="leading" secondItem="v7B-GA-LUq" secondAttribute="leadingMargin" id="i5g-qJ-XYb"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -219,15 +231,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RB-jF-Zdw">
-                                <rect key="frame" x="276" y="289" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length of Your Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj7-pf-s1f">
+                                <rect key="frame" x="16" y="95" width="568" height="29"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhZ-cv-bPW">
-                                <rect key="frame" x="217" y="318" width="167" height="30"/>
+                                <rect key="frame" x="217" y="520" width="167" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="9C9-fA-Lxw"/>
+                                    <constraint firstAttribute="height" constant="30" id="KtP-9w-yzI"/>
                                     <constraint firstAttribute="height" constant="30" id="TnL-NS-W9v"/>
                                     <constraint firstAttribute="width" constant="167" id="kJ5-xD-NP0"/>
                                 </constraints>
@@ -235,18 +249,41 @@
                                 <state key="normal" title="Tutorial Has Been Checked">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TnL-NS-W9v"/>
+                                        <exclude reference="kJ5-xD-NP0"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="TutorBtnClicked:" destination="ZuC-Kt-LY0" eventType="touchUpInside" id="uz3-fV-GJA"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bro-8r-xtr">
+                                <rect key="frame" x="175" y="194" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="KmS-J3-w4G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="3RB-jF-Zdw" secondAttribute="centerX" id="2ei-5k-1EP"/>
-                            <constraint firstItem="AhZ-cv-bPW" firstAttribute="top" secondItem="3RB-jF-Zdw" secondAttribute="bottom" constant="8" id="Dfm-Jn-tv4"/>
+                            <constraint firstAttribute="centerX" secondItem="AhZ-cv-bPW" secondAttribute="centerX" id="5et-3e-1CC"/>
+                            <constraint firstItem="Fj7-pf-s1f" firstAttribute="leading" secondItem="UlN-a1-kdP" secondAttribute="leadingMargin" id="OU0-p6-VMN"/>
+                            <constraint firstAttribute="centerX" secondItem="bro-8r-xtr" secondAttribute="centerX" id="TxH-H6-m0G"/>
+                            <constraint firstItem="NaU-bH-x3c" firstAttribute="top" secondItem="AhZ-cv-bPW" secondAttribute="bottom" constant="50" id="epi-jG-1wr"/>
                             <constraint firstAttribute="centerX" secondItem="AhZ-cv-bPW" secondAttribute="centerX" id="hd7-ij-Xzn"/>
-                            <constraint firstAttribute="centerY" secondItem="3RB-jF-Zdw" secondAttribute="centerY" id="jDi-hx-H1q"/>
+                            <constraint firstItem="Fj7-pf-s1f" firstAttribute="top" secondItem="TEj-Hd-Kxr" secondAttribute="bottom" constant="75" id="k1j-DD-Rmu"/>
+                            <constraint firstItem="bro-8r-xtr" firstAttribute="top" secondItem="Fj7-pf-s1f" secondAttribute="bottom" constant="70" id="kEo-x6-VXg"/>
+                            <constraint firstItem="Fj7-pf-s1f" firstAttribute="trailing" secondItem="UlN-a1-kdP" secondAttribute="trailingMargin" id="ssx-6q-Jb5"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hd7-ij-Xzn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="TutorSeenBtn" destination="AhZ-cv-bPW" id="7EI-2i-fey"/>
