@@ -36,6 +36,10 @@
     NSLog(@"%@, %@", Page1, Page2);
     [self setViewControllers:@[Page1] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 
+    
+    for (UIGestureRecognizer *recognizer in self.gestureRecognizers) {
+        recognizer.enabled = NO;
+    }
     // Do any additional setup after loading the view.
 }
 

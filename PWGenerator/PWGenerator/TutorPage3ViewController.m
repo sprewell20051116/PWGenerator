@@ -56,6 +56,9 @@
     //        textField.text = _UserAuthTypeArray[PickerSelected];
     //        [self SLUserAuth_SetUserAuthType:(USER_AUTH_TYPE) PickerSelected];
     //    }
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate Plist_SetPWLength:[textField.text integerValue]];
 }
 
 
@@ -98,7 +101,15 @@
 - (IBAction)TutorBtnClicked:(UIButton *)sender {
     // TODO: dismiss page view Controller
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    [[NSNotificationCenter defaultCenter] postNotificationName:TUTORIAL_NOTIFICATION_KEY object:self userInfo:nil];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate Plist_SetPWLength:[_PWlengthTextField.text integerValue]];
+
+    NSDictionary *UserInfoDic = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                 [appDelegate Plist_GetUserName], PLIST_SETTING_USER_NAME_KEY,
+                                 [NSNumber numberWithInteger:[_PWlengthTextField.text integerValue]], PLIST_SETTING_PW_LENGTH_KEY,
+                                 nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:TUTORIAL_NOTIFICATION_KEY object:self userInfo:UserInfoDic];
     
 }
 @end

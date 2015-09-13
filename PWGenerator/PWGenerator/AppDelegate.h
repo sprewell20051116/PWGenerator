@@ -11,6 +11,7 @@
 #define PLIST_SETTING_VERSION_KEY   @"Version"
 #define PLIST_SETTING_USER_NAME_KEY @"UserName"
 #define PLIST_SETTING_TUTORIAL_KEY  @"SeenTutor"
+#define PLIST_SETTING_PW_LENGTH_KEY @"PWLength"
 
 #define TUTORIAL_NOTIFICATION_KEY @"TUTORIAL_NOTIFICATION_KEY"
 
@@ -23,9 +24,14 @@
 
 
 #pragma mark -
-#pragma mark TutorSeen
+#pragma mark Plist Methods
 -(void) Plist_SettingTutorialSeen;
 -(BOOL) Plist_GetTutorialSeen;
+-(void) Plist_SetUserName : (NSString *) UserNameStr;
+-(NSString*) Plist_GetUserName;
+-(void) Plist_SetPWLength : (NSInteger) Length;
+-(NSNumber*) Plist_GetPWLength;
+
 @end
 
 

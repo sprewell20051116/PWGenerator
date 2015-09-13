@@ -7,7 +7,7 @@
 //
 
 #import "TutorPage2ViewController.h"
-
+#import "AppDelegate.h"
 @interface TutorPage2ViewController (){
     UITextField *_ActiveTextField;
 }
@@ -49,13 +49,10 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    //NSLog(@" textFieldDidEndEditing %d", [_AuthTypePicker selectedRowInComponent:0]);
-    //    if (textField.tag == UserAuth_AuthType_Tag) {
-    //
-    //        NSInteger PickerSelected = [_AuthTypePicker selectedRowInComponent:0];
-    //        textField.text = _UserAuthTypeArray[PickerSelected];
-    //        [self SLUserAuth_SetUserAuthType:(USER_AUTH_TYPE) PickerSelected];
-    //    }
+    NSLog(@"%s --- %@", __PRETTY_FUNCTION__, textField.text);
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate Plist_SetUserName:textField.text];
 }
 
 

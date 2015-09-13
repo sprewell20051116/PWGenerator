@@ -39,7 +39,7 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="1JV-UB-Ssa"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qt-Ob-a58">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qt-Ob-a58">
                                 <rect key="frame" x="257" y="126" width="86" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7eM-SM-CNP"/>

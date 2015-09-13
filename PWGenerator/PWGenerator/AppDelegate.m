@@ -135,5 +135,42 @@
     }
 }
 
+-(void) Plist_SetUserName : (NSString *) UserNameStr
+{
+    NSMutableDictionary *Dic = [self Read_SettingList];
+    [Dic setObject:UserNameStr forKey:PLIST_SETTING_USER_NAME_KEY];
+    [self Write_SettingListWithDictionary:Dic];
+}
+
+
+-(NSString*) Plist_GetUserName
+{
+    if (nil == [[self Read_SettingList] objectForKey:PLIST_SETTING_USER_NAME_KEY]) {
+        return nil;
+    } else {
+        return [[self Read_SettingList] objectForKey:PLIST_SETTING_USER_NAME_KEY];
+    }
+}
+
+
+-(void) Plist_SetPWLength : (NSInteger) Length
+{
+    NSMutableDictionary *Dic = [self Read_SettingList];
+    [Dic setObject:[NSNumber numberWithInteger:Length] forKey:PLIST_SETTING_PW_LENGTH_KEY];
+    [self Write_SettingListWithDictionary:Dic];
+}
+
+
+-(NSNumber*) Plist_GetPWLength
+{
+    if (nil == [[self Read_SettingList] objectForKey:PLIST_SETTING_PW_LENGTH_KEY]) {
+        return nil;
+    } else {
+        return [[self Read_SettingList] objectForKey:PLIST_SETTING_PW_LENGTH_KEY];
+    }
+}
+
+
+
 
 @end

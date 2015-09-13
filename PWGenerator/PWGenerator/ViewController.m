@@ -44,6 +44,22 @@
                 [self presentViewController:_TutorPage animated:NO completion:nil];
             });
         });
+    } else {
+        
+        if ([appDelegate Plist_GetUserName]) {
+            _UserNameLab.text = [appDelegate Plist_GetUserName];
+            NSLog(@"!! %@", [appDelegate Plist_GetUserName]);
+            _UserNameTextField.hidden = YES;
+            _UserNameTextField.text = [appDelegate Plist_GetUserName];
+        }
+        
+        
+        if ([appDelegate Plist_GetPWLength]) {
+            NSLog(@"1111 %@", [appDelegate Plist_GetPWLength]);
+            _PWLengthLab.text = [NSString stringWithFormat:@"%@%@", PASSWORD_LENGTH_PREFIX_STRING, [appDelegate Plist_GetPWLength]];
+        } else {
+            _PWLengthLab.text = [NSString stringWithFormat:@"%@%d", PASSWORD_LENGTH_PREFIX_STRING, PASSWORD_DEFAULT_LENGTH];
+        }
     }
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -61,16 +77,34 @@
 
 - (void) RegisterNotification_TutorialDone
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification) name:TUTORIAL_NOTIFICATION_KEY object:nil];
+    NSDictionary *UserInfoDic;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:TUTORIAL_NOTIFICATION_KEY object:UserInfoDic];
 }
 
--(void) receiveNotification
+-(void) receiveNotification:(NSDictionary*) UserInfoDic
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s %@", __PRETTY_FUNCTION__, UserInfoDic);
     [_TutorPage Dissmiss:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:TUTORIAL_NOTIFICATION_KEY object:nil];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     [appDelegate Plist_SettingTutorialSeen];
+    
+    
+    //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    if ([appDelegate Plist_GetUserName]) {
+        _UserNameLab.text = [appDelegate Plist_GetUserName];
+        NSLog(@"!! %@", [appDelegate Plist_GetUserName]);
+        _UserNameTextField.hidden = YES;
+        _UserNameTextField.text = [appDelegate Plist_GetUserName];
+    }
+    
+    if ([appDelegate Plist_GetPWLength]) {
+        NSLog(@"1111 %@", [appDelegate Plist_GetPWLength]);
+        _PWLengthLab.text = [NSString stringWithFormat:@"%@%@", PASSWORD_LENGTH_PREFIX_STRING, [appDelegate Plist_GetPWLength]];
+    } else {
+        _PWLengthLab.text = [NSString stringWithFormat:@"%@%d", PASSWORD_LENGTH_PREFIX_STRING, PASSWORD_DEFAULT_LENGTH];
+    }
+
 }
 
 
@@ -102,7 +136,8 @@
 
 -(void) init_PWLengthLab
 {
-    _PWLengthLab.text = [NSString stringWithFormat:@"%@%d", PASSWORD_LENGTH_PREFIX_STRING, PASSWORD_DEFAULT_LENGTH];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    _PWLengthLab.text = [NSString stringWithFormat:@"%@%@", PASSWORD_LENGTH_PREFIX_STRING, [appDelegate Plist_GetPWLength]];
 }
 
 -(void) init_SettingBtn
@@ -177,7 +212,8 @@
         NSString *HashStr = [NSString stringWithFormat:@"%@%@", _UserNameTextField.text, _SimplePWTextField.text];
         
         if ([HashStr length] > 0) {
-            _PasswordTextView.text = [[HashStr sha1] substringWithRange:NSMakeRange(0, PASSWORD_DEFAULT_LENGTH)];
+            AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+            _PasswordTextView.text = [[HashStr sha1] substringWithRange:NSMakeRange(0, [appDelegate Plist_GetPWLength].integerValue)];
         }
     }
 
