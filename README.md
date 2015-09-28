@@ -1,2 +1,4 @@
 # PWGenerator
-Use simple algorithm to generate password
+Use simple algorithm to generate password. 
+Working With Harrick.
+
